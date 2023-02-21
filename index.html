@@ -27,27 +27,55 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Courses</a>
+                <a class="nav-link" href="#courses">Courses</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Deals</a>
+                <a class="nav-link" href="#register">Deals</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Success</a>
+                <a class="nav-link" href="#success">Success</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+                <a class="nav-link" href="#register">Register</a>
               </li>
             </ul>
             <span class="navbar-text">
-              <button class="btn btn-outline-primary">Register</button>
+              <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register</button>
             </span>
           </div>
         </div>
       </nav>
+
+      <!-- Modal Register -->
+      <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="registerModalLabel">Register</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- form -->
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" />
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
 
       <!-- Banner -->
       <section class="container my-md-3">
@@ -95,7 +123,7 @@
 
     <main>
       <!-- Popular Courses -->
-      <section class="container my-5">
+      <section id="courses" class="container my-5">
         <h1 class="fw-semibold text-center"><span class="d-md-block">Discover Our Popular</span> Courses</h1>
         <p class="w-75 mx-auto text-center mb-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
         <div class="row row-cols-1 row-cols-lg-2 g-4">
@@ -188,10 +216,10 @@
       </section>
 
       <!-- portfolio -->
-      <section class="container my-5">
+      <section id="about" class="container my-5">
         <div class="row row-cols-1 g-0">
           <div class="col col-md-5 shadow">
-            <img class="w-100 working" src="./images/working.png" alt="" />
+            <img class="w-100 working-img" src="./images/working.png" alt="" />
           </div>
           <div class="col col-md-7 d-flex align-items-center p-3 bg-ligthcream shadow">
             <div>
@@ -223,7 +251,7 @@
       </section>
 
       <!-- Join now -->
-      <section class="container my-5">
+      <section id="register" class="container my-5">
         <div class="p-5 bg-primary rounded-4 d-lg-flex justify-content-between">
           <div class="d-none d-lg-block text-white">
             <h2 class="fw-semibold">Ready to join?</h2>
@@ -236,40 +264,12 @@
           <div class="d-flex align-items-center justify-content-center">
             <button class="btn btn-lg btn-light text-primary" data-bs-toggle="modal" data-bs-target="#registerModal">Register Now</button>
           </div>
-
-          <!-- Modal -->
-          <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true" data-bs-backdrop="static">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="registerModalLabel">Register</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <!-- form -->
-                  <form>
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Register</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--  -->
         </div>
       </section>
 
       <!-- Successful Students -->
-      <section class="container my-5">
-        <h1>Meet Our Successfull Students</h1>
+      <section id="success" class="container my-5">
+        <h1>Meet Our Successful Students</h1>
         <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
@@ -313,6 +313,70 @@
 
         <div class="d-flex align-items-center justify-content-center my-3">
           <button class="btn btn-lg btn-primary fw-semibold">View All</button>
+        </div>
+      </section>
+
+      <!-- review -->
+      <section class="container my-5">
+        <h1 class="fw-semibold text-center">Some Students Feedback</h1>
+        <p class="text-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout</p>
+        <div class="row row-cols-1 row-cols-lg-2 g-3">
+          <div class="col">
+            <div class="card p-3 position-relative">
+              <div class="d-flex justify-content-between align-items-center pb-2">
+                <img class="img-fluid" src="./images/comma.png" alt="" />
+                <div class="text-warning">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+              <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a
+                passage of Lorem.
+              </p>
+              <div class="d-flex">
+                <img src="./images/student/student-5.png" alt="" width="60px" height="60px" />
+                <div class="px-3 py-2">
+                  <h6 class="fw-bold mb-0">Awlad Hossain </h6>
+                  <small>UI Designer</small>
+                </div>
+              </div>
+
+              <!-- prev arrow btn -->
+              <div class="d-none d-lg-block bg-primary rounded-circle position-absolute top-50 start-0 translate-middle"><i class="fa-solid fa-chevron-left p-2"></i></div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card p-3 position-relative">
+              <div class="d-flex justify-content-between align-items-center pb-2">
+                <img class="img-fluid" src="./images/comma.png" alt="" />
+                <div class="text-warning">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+              <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a
+                passage of Lorem.
+              </p>
+              <div class="d-flex">
+                <img src="./images/student/student-6.png" alt="" width="60px" height="60px" />
+                <div class="px-3 py-2">
+                  <h6 class="fw-bold mb-0">Shanta Akter </h6>
+                  <small>Graphic Designer </small>
+                </div>
+              </div>
+
+              <!-- next arrow btn -->
+              <div class="d-none d-lg-block bg-primary rounded-circle position-absolute top-50 start-100 translate-middle"><i class="fa-solid fa-chevron-right p-2"></i></div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -400,8 +464,6 @@
           </div>
         </div>
       </section>
-
-      <!-- review -->
     </main>
 
     <!-- footer -->
@@ -412,10 +474,18 @@
         <p>Sultanate of Oman</p>
         <p>Privacy Ploicy | Terms of use</p>
         <div class="fs-3">
-          <i class="fa-brands fa-facebook me-3"></i>
-          <i class="fa-brands fa-square-twitter me-3"></i>
-          <i class="fa-brands fa-linkedin me-3"></i>
-          <i class="fa-brands fa-github"></i>
+          <a target="_blank" class="text-decoration-none text-white" href="https://www.facebook.com/arifulsajib347/">
+            <i class="fa-brands fa-facebook me-3"></i>
+          </a>
+          <a target="_blank" class="text-decoration-none text-white" href="https://twitter.com/arifulsajib347">
+            <i class="fa-brands fa-square-twitter me-3"></i>
+          </a>
+          <a target="_blank" class="text-decoration-none text-white" href="https://www.linkedin.com/in/arifulsajib/">
+            <i class="fa-brands fa-linkedin me-3"></i>
+          </a>
+          <a target="_blank" class="text-decoration-none text-white" href="https://github.com/arifulsajib">
+            <i class="fa-brands fa-github"></i>
+          </a>
         </div>
       </div>
     </footer>

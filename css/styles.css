@@ -26,11 +26,10 @@
   background-color: #f4fafd;
 }
 
-.working {
-  max-height: 580px;
+.working-img {
+  max-height: 570px;
 }
 
-/* .student-img {
-  max-width: 312px;
+.students-img {
   max-height: 300px;
-} */
+}
