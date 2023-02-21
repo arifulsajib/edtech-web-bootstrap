@@ -1,0 +1,36 @@
+.carousel-item img {
+  min-height: 390px;
+  max-height: 600px;
+}
+
+.fs-big {
+  font-size: 45px;
+}
+
+/* Darker image carousel */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.course-img {
+  max-height: 280px;
+}
+
+.bg-ligthcream {
+  background-color: #f4fafd;
+}
+
+.working {
+  max-height: 580px;
+}
+
+/* .student-img {
+  max-width: 312px;
+  max-height: 300px;
+} */
